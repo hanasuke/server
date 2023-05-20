@@ -257,7 +257,7 @@ class SwiftFactory {
 	 */
 	private function createContainer() {
 		$client = $this->getClient();
-		$objectStoreService = $client->objectStoreV1();
+		$objectStoreService = $client->objectStoreV1($this->params);
 
 		$autoCreate = isset($this->params['autocreate']) && $this->params['autocreate'] === true;
 		try {
